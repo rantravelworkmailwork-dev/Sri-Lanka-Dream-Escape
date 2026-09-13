@@ -14,14 +14,14 @@
 html, body {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Stops screen popping/scrolling horizontally */
 }
 
 body {
   font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
   color: var(--body-text);
-  font-size: 0.875rem; /* Compact base font (14px) */
-  line-height: 1.5;
+  font-size: 0.95rem; /* Scaled down base font */
+  line-height: 1.55;
 
   /* Overlay pattern */
   background: 
@@ -39,10 +39,10 @@ body {
   background-color: #0b2545 !important;
 }
 
-/* --- Header Navbar & Logo Styling --- */
+/* --- Header Navbar & Logo Styling (Mobile Responsive) --- */
 .brand-logo {
-  height: 48px;
-  max-height: 48px;
+  height: 58px;
+  max-height: 58px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
@@ -53,37 +53,29 @@ body {
   transform: scale(1.03);
 }
 
-.navbar-brand span {
-  font-size: 1rem !important;
-}
-
-.navbar-brand small {
-  font-size: 0.75rem !important;
-}
-
 /* --- Hero Section --- */
 .hero {
   background: linear-gradient(180deg, rgba(15, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.92) 100%), 
               url('images/top_background.jpeg') center/cover no-repeat, #0f172a;
   color: #ffffff;
-  padding: 38px 15px 28px;
-  border-radius: 0 0 20px 20px;
+  padding: 50px 20px 35px;
+  border-radius: 0 0 24px 24px;
 }
 
 .hero h1 {
-  font-size: 2rem; /* Scaled down hero title */
-  font-weight: 800;
+  font-size: 2.5rem; /* Reduced from 3rem */
+  font-weight: 900;
   letter-spacing: -0.5px;
   color: #ffffff;
 }
 
 .hero p {
-  font-size: 0.98rem;
+  font-size: 1.15rem;
   color: #f8fafc;
 }
 
 .hero-meta {
-  font-size: 0.88rem;
+  font-size: 0.98rem;
   font-weight: 600;
   color: #ffffff;
 }
@@ -92,13 +84,9 @@ body {
 .overview-card {
   background: #ffffff;
   border: 1px solid #cbd5e1;
-  border-left: 4px solid var(--primary);
-  border-radius: 12px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
-}
-
-.overview-card h4 {
-  font-size: 1.1rem;
+  border-left: 5px solid var(--primary);
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 /* Glassmorphism Metric Cards */
@@ -106,37 +94,37 @@ body {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
   border: 1px solid #cbd5e1;
-  border-radius: 12px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
   transition: all 0.25s ease;
 }
 
 .glass-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px -4px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.08);
 }
 
 .metric-label {
   color: #475569;
   font-weight: 700;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.5px;
 }
 
 .metric-value {
   color: #0f172a;
   font-weight: 800;
-  font-size: 1.15rem; /* Scaled down metric numbers */
+  font-size: 1.35rem; /* Scaled down slightly */
 }
 
 /* Leaflet Map Styling */
 #sri-lanka-map {
-  height: 400px;
+  height: 440px;
   width: 100%;
-  border-radius: 14px;
+  border-radius: 16px;
   z-index: 1;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
 /* Custom Leaflet Map Pin Styles */
@@ -145,36 +133,36 @@ body {
   color: #ffffff;
   border: 2px solid #ffffff;
   border-radius: 50%;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  font-size: 12px;
-  box-shadow: 0 3px 8px rgba(2, 132, 199, 0.4);
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.4);
   transition: transform 0.2s;
 }
 
 .custom-map-pin:hover {
-  transform: scale(1.15);
+  transform: scale(1.18);
   background: var(--accent);
 }
 
 /* Styled Accordions */
 .accordion-item {
   border: 1px solid #cbd5e1;
-  margin-bottom: 10px;
-  border-radius: 12px !important;
+  margin-bottom: 14px;
+  border-radius: 14px !important;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
 }
 
 .accordion-button {
-  font-weight: 700;
+  font-weight: 800;
   color: #0f172a;
-  padding: 12px 16px;
-  font-size: 0.92rem; /* Compact day header text */
+  padding: 16px 20px;
+  font-size: 1.05rem; /* Scaled down header */
   background-color: #ffffff;
 }
 
@@ -184,13 +172,9 @@ body {
   border-bottom: 1px solid #bae6fd;
 }
 
-.accordion-body {
-  padding: 14px 16px;
-}
-
 .accordion-body p {
   color: #1e293b;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 500;
 }
 
@@ -199,19 +183,19 @@ body {
   background: #e2e8f0;
   color: #0f172a;
   font-weight: 700;
-  font-size: 0.72rem;
-  padding: 4px 10px;
-  border-radius: 12px;
+  font-size: 0.78rem;
+  padding: 5px 12px;
+  border-radius: 16px;
   display: inline-block;
-  margin-right: 4px;
-  margin-top: 4px;
+  margin-right: 5px;
+  margin-top: 6px;
 }
 
 .stay-info {
   background-color: #f8fafc;
   border: 1px solid #cbd5e1;
   color: #0f172a;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 
@@ -219,17 +203,17 @@ body {
 .day-photo-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
+  gap: 8px;
 }
 
 .day-photo-grid img {
   width: 100%;
-  height: 95px;
+  height: 110px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 8px;
   background-color: #cbd5e1;
   transition: transform 0.25s ease, filter 0.25s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .day-photo-grid img:hover {
@@ -241,45 +225,39 @@ body {
 h5 {
   color: #0f172a;
   font-weight: 800;
-  font-size: 1.1rem;
-}
-
-h6 {
-  font-size: 0.95rem !important;
+  font-size: 1.25rem;
 }
 
 .package-list li {
   color: #0f172a;
   font-weight: 600;
-  font-size: 0.84rem;
-  margin-bottom: 4px;
+  font-size: 0.92rem;
+  margin-bottom: 5px;
 }
 
-/* --- FOOTER STYLING & MOBILE OPTIMIZATIONS --- */
+/* --- FOOTER STYLING & MOBILE RESPONSIVENESS FIXES --- */
 .agency-footer {
-  background: #0f172a;
+  background: #0f172a; /* Deep navy-dark background */
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
-  word-break: break-word;
-  padding-top: 2rem !important;
-  padding-bottom: 1.25rem !important;
+  word-break: break-word; /* Prevents overflow of long emails or links */
 }
 
 .footer-logo {
-  height: 44px !important;
+  height: 52px !important;
   width: auto;
   object-fit: contain;
   background-color: #ffffff;
-  padding: 3px 8px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 4px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .agency-footer .border-secondary {
-  border-color: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
 }
 
 .footer-contact-text {
-  font-size: 0.8rem;
+  font-size: 0.88rem;
 }
 
 .hover-white:hover {
@@ -287,15 +265,14 @@ h6 {
 }
 
 .contact-call-card {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.12) !important;
-  padding: 10px 14px !important;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15) !important;
 }
 
 .phone-link {
   color: #ffffff;
   font-weight: 700;
-  font-size: 0.88rem;
+  font-size: 1rem;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -306,48 +283,49 @@ h6 {
 
 /* --- Mobile Responsiveness Media Query --- */
 @media (max-width: 768px) {
+  /* Scale down header logo on small screens */
   .brand-logo { 
-    height: 36px !important; 
+    height: 42px !important; 
   }
   
   .navbar-brand span {
-    font-size: 0.82rem !important;
+    font-size: 0.9rem !important;
   }
 
   .navbar-brand small {
-    font-size: 0.65rem !important;
+    font-size: 0.7rem !important;
   }
 
   /* Hero Adjustments */
   .hero {
-    padding: 28px 12px 20px;
+    padding: 35px 15px 25px;
   }
 
   .hero h1 { 
-    font-size: 1.45rem; 
+    font-size: 1.75rem; 
   }
 
   .hero p { 
-    font-size: 0.88rem; 
+    font-size: 1rem; 
   }
 
   .hero-meta {
-    font-size: 0.78rem;
+    font-size: 0.85rem;
   }
 
   /* Grid & Map scaling */
   .day-photo-grid img { 
-    height: 75px; 
+    height: 85px; 
   }
 
   #sri-lanka-map {
-    height: 300px;
+    height: 320px;
   }
 
-  /* Mobile Footer Fixes */
+  /* Comprehensive Mobile Footer Fixes */
   .agency-footer {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 1.5rem !important;
   }
 
   .agency-footer .row {
@@ -356,13 +334,13 @@ h6 {
   }
 
   .footer-logo {
-    height: 38px !important;
+    height: 44px !important;
   }
 
   .contact-call-card {
     width: 100% !important;
     text-align: center !important;
-    margin-top: 0.8rem;
+    margin-top: 1rem;
   }
 
   .contact-call-card .d-flex {
@@ -370,6 +348,6 @@ h6 {
   }
 
   .footer-contact-text {
-    font-size: 0.76rem;
+    font-size: 0.82rem;
   }
 }
