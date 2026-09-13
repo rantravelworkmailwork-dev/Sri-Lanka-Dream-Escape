@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollWheelZoom: false // Prevents accidental scrolling on mobile
   }).setView([7.5, 80.5], 8);
 
-  // Clean Light Map Theme (No API Key required)
-  L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
+  // Clean English-Only Map (Esri - Free, No API Key, No Watermarks)
+  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}", {
     maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom'
   }).addTo(map);
 
   // 5 Route Pins matching the updated itinerary geographic stops
