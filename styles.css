@@ -12,17 +12,18 @@
 }
 
 html, body {
+  width: 100%;
   max-width: 100%;
-  overflow-x: hidden; /* Stops screen popping/scrolling horizontally */
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
   color: var(--body-text);
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: 0.875rem; /* Compact base font (14px) */
+  line-height: 1.5;
 
-  /* 95% solid white/slate overlay over the pattern */
+  /* Overlay pattern */
   background: 
     linear-gradient(rgba(248, 250, 252, 0.75), rgba(248, 250, 252, 0.75)),
     url('images/licensed-image.jpg') repeat fixed;
@@ -38,39 +39,26 @@ body {
   background-color: #0b2545 !important;
 }
 
-/* --- Header Navbar & Logo Styling (Mobile Responsive) --- */
+/* --- Header Navbar & Logo Styling --- */
 .brand-logo {
-  height: 68px; /* High resolution on desktop */
-  max-height: 68px;
+  height: 48px;
+  max-height: 48px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
-  transition: transform 0.2s ease, height 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .brand-logo:hover {
   transform: scale(1.03);
 }
 
-/* --- Footer Logo Styling --- */
-.footer-logo {
-  height: 64px !important;
-  width: auto;
-  object-fit: contain;
-  background-color: #ffffff;
-  padding: 6px 12px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+.navbar-brand span {
+  font-size: 1rem !important;
 }
 
-/* Footer Styling */
-.agency-footer {
-  background: #0f172a; /* Deep navy-dark background */
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.agency-footer .border-secondary {
-  border-color: rgba(255, 255, 255, 0.15) !important;
+.navbar-brand small {
+  font-size: 0.75rem !important;
 }
 
 /* --- Hero Section --- */
@@ -78,24 +66,24 @@ body {
   background: linear-gradient(180deg, rgba(15, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.92) 100%), 
               url('images/top_background.jpeg') center/cover no-repeat, #0f172a;
   color: #ffffff;
-  padding: 60px 20px 45px;
-  border-radius: 0 0 28px 28px;
+  padding: 38px 15px 28px;
+  border-radius: 0 0 20px 20px;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  font-weight: 900;
+  font-size: 2rem; /* Scaled down hero title */
+  font-weight: 800;
   letter-spacing: -0.5px;
   color: #ffffff;
 }
 
 .hero p {
-  font-size: 1.35rem;
+  font-size: 0.98rem;
   color: #f8fafc;
 }
 
 .hero-meta {
-  font-size: 1.1rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: #ffffff;
 }
@@ -104,9 +92,13 @@ body {
 .overview-card {
   background: #ffffff;
   border: 1px solid #cbd5e1;
-  border-left: 6px solid var(--primary);
-  border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid var(--primary);
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.overview-card h4 {
+  font-size: 1.1rem;
 }
 
 /* Glassmorphism Metric Cards */
@@ -114,37 +106,37 @@ body {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
   border: 1px solid #cbd5e1;
-  border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
   transition: all 0.25s ease;
 }
 
 .glass-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 16px -4px rgba(0, 0, 0, 0.08);
 }
 
 .metric-label {
   color: #475569;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
 }
 
 .metric-value {
   color: #0f172a;
   font-weight: 800;
-  font-size: 1.6rem;
+  font-size: 1.15rem; /* Scaled down metric numbers */
 }
 
 /* Leaflet Map Styling */
 #sri-lanka-map {
-  height: 480px;
+  height: 400px;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 14px;
   z-index: 1;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 3px 15px rgba(0,0,0,0.06);
 }
 
 /* Custom Leaflet Map Pin Styles */
@@ -153,36 +145,36 @@ body {
   color: #ffffff;
   border: 2px solid #ffffff;
   border-radius: 50%;
-  width: 34px;
-  height: 34px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  font-size: 15px;
-  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.4);
+  font-size: 12px;
+  box-shadow: 0 3px 8px rgba(2, 132, 199, 0.4);
   transition: transform 0.2s;
 }
 
 .custom-map-pin:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
   background: var(--accent);
 }
 
 /* Styled Accordions */
 .accordion-item {
   border: 1px solid #cbd5e1;
-  margin-bottom: 18px;
-  border-radius: 16px !important;
+  margin-bottom: 10px;
+  border-radius: 12px !important;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
 
 .accordion-button {
-  font-weight: 800;
+  font-weight: 700;
   color: #0f172a;
-  padding: 20px 24px;
-  font-size: 1.2rem;
+  padding: 12px 16px;
+  font-size: 0.92rem; /* Compact day header text */
   background-color: #ffffff;
 }
 
@@ -192,9 +184,13 @@ body {
   border-bottom: 1px solid #bae6fd;
 }
 
+.accordion-body {
+  padding: 14px 16px;
+}
+
 .accordion-body p {
   color: #1e293b;
-  font-size: 1.08rem;
+  font-size: 0.85rem;
   font-weight: 500;
 }
 
@@ -203,19 +199,19 @@ body {
   background: #e2e8f0;
   color: #0f172a;
   font-weight: 700;
-  font-size: 0.85rem;
-  padding: 6px 14px;
-  border-radius: 20px;
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  border-radius: 12px;
   display: inline-block;
-  margin-right: 6px;
-  margin-top: 8px;
+  margin-right: 4px;
+  margin-top: 4px;
 }
 
 .stay-info {
   background-color: #f8fafc;
   border: 1px solid #cbd5e1;
   color: #0f172a;
-  font-size: 1rem;
+  font-size: 0.82rem;
   font-weight: 600;
 }
 
@@ -223,17 +219,17 @@ body {
 .day-photo-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 6px;
 }
 
 .day-photo-grid img {
   width: 100%;
-  height: 120px;
+  height: 95px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 6px;
   background-color: #cbd5e1;
   transition: transform 0.25s ease, filter 0.25s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
 }
 
 .day-photo-grid img:hover {
@@ -245,51 +241,135 @@ body {
 h5 {
   color: #0f172a;
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 0.95rem !important;
 }
 
 .package-list li {
   color: #0f172a;
   font-weight: 600;
-  font-size: 1.02rem;
-  margin-bottom: 6px;
+  font-size: 0.84rem;
+  margin-bottom: 4px;
 }
 
-/* --- Comprehensive Mobile Responsiveness Media Query --- */
+/* --- FOOTER STYLING & MOBILE OPTIMIZATIONS --- */
+.agency-footer {
+  background: #0f172a;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  word-break: break-word;
+  padding-top: 2rem !important;
+  padding-bottom: 1.25rem !important;
+}
+
+.footer-logo {
+  height: 44px !important;
+  width: auto;
+  object-fit: contain;
+  background-color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.agency-footer .border-secondary {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.footer-contact-text {
+  font-size: 0.8rem;
+}
+
+.hover-white:hover {
+  color: #38bdf8 !important;
+}
+
+.contact-call-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  padding: 10px 14px !important;
+}
+
+.phone-link {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.phone-link:hover {
+  color: #38bdf8;
+}
+
+/* --- Mobile Responsiveness Media Query --- */
 @media (max-width: 768px) {
-  /* Scale down header logo on small screens */
   .brand-logo { 
-    height: 46px !important; 
+    height: 36px !important; 
   }
   
-  /* Shrink text next to logo so it doesn't push off-screen */
   .navbar-brand span {
-    font-size: 0.95rem !important;
+    font-size: 0.82rem !important;
   }
 
   .navbar-brand small {
-    font-size: 0.72rem !important;
+    font-size: 0.65rem !important;
   }
 
   /* Hero Adjustments */
   .hero {
-    padding: 40px 15px 30px;
+    padding: 28px 12px 20px;
   }
 
   .hero h1 { 
-    font-size: 2rem; 
+    font-size: 1.45rem; 
   }
 
   .hero p { 
-    font-size: 1.1rem; 
+    font-size: 0.88rem; 
   }
 
-  /* Grid scaling */
+  .hero-meta {
+    font-size: 0.78rem;
+  }
+
+  /* Grid & Map scaling */
   .day-photo-grid img { 
-    height: 90px; 
+    height: 75px; 
   }
 
   #sri-lanka-map {
-    height: 350px;
+    height: 300px;
+  }
+
+  /* Mobile Footer Fixes */
+  .agency-footer {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .agency-footer .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .footer-logo {
+    height: 38px !important;
+  }
+
+  .contact-call-card {
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 0.8rem;
+  }
+
+  .contact-call-card .d-flex {
+    justify-content: center !important;
+  }
+
+  .footer-contact-text {
+    font-size: 0.76rem;
   }
 }
