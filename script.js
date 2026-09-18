@@ -18,37 +18,37 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       day: "Days 1 & 2 (23rd–24th)",
       title: "Habarana & Sigiriya Region",
-      stay: "Priya Wimana / Wewa Addara",
+      stay: "Cassandra Culture Resort",
       coords: [8.0339, 80.7533],
-      desc: "Early check-in, Village tour, Elephant safari & Ayurveda massage."
+      desc: "Late-night arrival (CX 611), Elephant Safari & Traditional Ayurveda massage."
     },
     {
       day: "Day 3 (25th)",
-      title: "Kandy",
-      stay: "Hotel Thilanka",
+      title: "Sigiriya to Kandy",
+      stay: "Thilanka Kandy",
       coords: [7.2906, 80.6337],
-      desc: "Sigiriya Rock, Spice Garden lunch, Temple of the Tooth & Cultural Show."
+      desc: "Sigiriya Rock Fortress, Spice Garden lunch, Dambulla Temple, Cultural Show & Temple of Tooth."
     },
     {
       day: "Day 4 (26th)",
       title: "Nuwara Eliya",
-      stay: "Misthill Rest",
+      stay: "Heaven Seven",
       coords: [6.9497, 80.7891],
-      desc: "Ramboda Falls, Tea garden & factory tour, Gem museum."
+      desc: "Ramboda Falls, Tea Plantation & Factory tour, Post Office & Seetha Amman Temple."
     },
     {
       day: "Day 5 (27th)",
-      title: "Induruwa",
+      title: "Induruwa Beach",
       stay: "Pandanus Beach Resort",
       coords: [6.3814, 80.0022],
-      desc: "Madu River boat ride & Sea Turtle Hatchery."
+      desc: "St. Clair's Waterfall viewpoint, Sea Turtle Hatchery & Beach relaxation."
     },
     {
       day: "Day 6 (28th)",
-      title: "Rest & Drop-off",
-      stay: "Mr. Amal's House",
-      coords: [7.1895, 79.8656],
-      desc: "Rest day at resort & midnight drop-off at Mr. Amal’s home."
+      title: "Colombo City Tour & Departure",
+      stay: "Departure Transfer",
+      coords: [6.9271, 79.8612],
+      desc: "Red Mosque, Independence Square & optional Mount Lavinia to Colombo Fort train ride."
     }
   ];
 
